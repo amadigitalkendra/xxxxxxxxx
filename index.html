@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Media Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Media Platform</h1>
+  <nav>
+    <button onclick="showLogin()">Login</button>
+    <button onclick="logout()">Logout</button>
+  </nav>
+</header>
+
+<main>
+  <!-- LOGIN -->
+  <section id="loginSection">
+    <h2>Login</h2>
+    <input id="username" placeholder="Username" />
+    <input id="password" type="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </section>
+
+  <!-- CONTENT -->
+  <section id="contentSection" class="hidden">
+    <h2>Premium Media</h2>
+
+    <div class="grid">
+      <video controls src="media/video1.mp4"></video>
+      <video controls src="media/video2.mp4"></video>
+      <video controls src="media/video3.mp4"></video>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Media Platform</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
