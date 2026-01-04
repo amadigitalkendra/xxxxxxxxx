@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Media Gallery</title>
+  <title>Media Showcase</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- INTERNAL CSS -->
   <style>
     * {
       box-sizing: border-box;
@@ -13,13 +12,13 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #0f0f0f;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #0b0b0b, #141414);
       color: #ffffff;
     }
 
     header {
-      padding: 20px;
+      padding: 25px;
       text-align: center;
       background: #000;
       border-bottom: 1px solid #222;
@@ -27,39 +26,71 @@
 
     header h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 32px;
       letter-spacing: 1px;
     }
 
+    header p {
+      margin-top: 8px;
+      color: #aaa;
+      font-size: 15px;
+    }
+
     main {
-      padding: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .media-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
 
-    video,
-    img {
+    .media-card {
+      background: #111;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .media-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    }
+
+    .media-card video {
       width: 100%;
-      height: auto;
-      border-radius: 10px;
+      display: block;
       background: #000;
     }
 
-    video {
-      outline: none;
+    .media-info {
+      padding: 15px;
+    }
+
+    .media-info h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .media-info p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #bbb;
+      line-height: 1.5;
     }
 
     footer {
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       font-size: 14px;
-      color: #888;
+      color: #777;
       border-top: 1px solid #222;
-      margin-top: 30px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -67,28 +98,46 @@
 <body>
 
   <header>
-    <h1>Media Gallery</h1>
+    <h1>Media Showcase</h1>
+    <p>High-quality videos curated for viewing</p>
   </header>
 
   <main>
     <div class="media-grid">
 
-      <!-- VIDEOS -->
-      <video controls src="media/video1.mp4"></video>
-      <video controls src="media/video2.mp4"></video>
-      <video controls src="media/video3.mp4"></video>
+      <!-- MEDIA CARD 1 -->
+      <div class="media-card">
+        <video controls src="media/video1.mp4"></video>
+        <div class="media-info">
+          <h3>City Lights</h3>
+          <p>A cinematic night view showcasing vibrant city life and glowing skylines.</p>
+        </div>
+      </div>
 
-      <!-- IMAGES (optional) -->
-      <img src="media/image1.jpg" alt="Media Image">
-      <img src="media/image2.jpg" alt="Media Image">
+      <!-- MEDIA CARD 2 -->
+      <div class="media-card">
+        <video controls src="media/video2.mp4"></video>
+        <div class="media-info">
+          <h3>Nature Escape</h3>
+          <p>Relaxing visuals of forests and open landscapes for calm viewing.</p>
+        </div>
+      </div>
+
+      <!-- MEDIA CARD 3 -->
+      <div class="media-card">
+        <video controls src="media/video3.mp4"></video>
+        <div class="media-info">
+          <h3>Urban Motion</h3>
+          <p>Fast-paced scenes capturing the energy and rhythm of city movement.</p>
+        </div>
+      </div>
 
     </div>
   </main>
 
   <footer>
-    © 2026 Media Gallery
+    © 2026 Media Showcase
   </footer>
 
 </body>
 </html>
-
